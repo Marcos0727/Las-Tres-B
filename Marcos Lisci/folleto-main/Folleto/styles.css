@@ -1,0 +1,117 @@
+/* Estilos generales */
+body {
+    font-family: Serif, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+header {
+    background: #ffffff;
+    color: #000000;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 700px; /* Ancho máximo para pantallas grandes */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+section h2 {
+    background: #64C9CF;
+    color: #fff;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+}
+
+/* Cuadrícula de productos */
+.products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre productos */
+}
+
+.product {
+    flex: 1 1 calc(25% - 20px); /* Cuatro productos por fila en pantallas grandes */
+    box-sizing: border-box;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Espacia el contenido dentro del producto */
+    align-items: center;
+    padding: 10px;
+    height: auto; /* Ajusta la altura automáticamente */
+}
+
+.product img {
+    width: 50%;
+    max-height: 350px; /* Limita la altura máxima de la imagen */
+    object-fit: cover; /* Asegura que la imagen mantenga sus proporciones y se recorte si es necesario */
+    border-bottom: 1px solid #ddd;
+}
+
+.product h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 16px;
+    color: #333;
+    margin: 0 0 10px;
+}
+
+.product .price {
+    font-size: 20px;
+    color: #000;
+    font-weight: bold;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+    .product {
+        flex: 1 1 calc(33.333% - 20px); /* Tres productos por fila */
+    }
+}
+
+@media (max-width: 900px) {
+    .product {
+        flex: 1 1 calc(50% - 20px); /* Dos productos por fila */
+    }
+}
+
+@media (max-width: 600px) {
+    .product {
+        flex: 1 1 calc(100% - 20px); /* Un producto por fila */
+    }
+}
+
+/* Pie de página */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
